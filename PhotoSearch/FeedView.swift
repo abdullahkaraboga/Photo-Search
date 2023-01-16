@@ -12,6 +12,11 @@ struct FeedView: View {
     @State var isSearching = false
     @State var showResult = false
     @State var loadSearch = false
+
+
+    var tag = ["Weather", "Football", "Fishing", "Culture", "Politics", "Technology", "Dogs", "Lifestyle", "Food"]
+
+
     var body: some View {
         GeometryReader { bounds in
 
@@ -19,21 +24,42 @@ struct FeedView: View {
 
                 SearchBar(searchText: $searchText, isSearching: $isSearching, showResult: $showResult, loadSearch: $loadSearch)
                     .padding(.top, 8)
-                    .padding(.bottom, 8)
+                    .padding(.bottom, 2)
+
+
+                ScrollView(.horizontal,showsIndicators: false){
+                    HStack {
+                        ForEach(tag.indices) {
+
+                            Text(tag[$0])
+                                .font(.subheadline)
+                                .frame(height: 30)
+                                .padding(.horizontal)
+                                .overlay (
+                                Capsule()
+                                    .stroke(Color(.systemGray5), lineWidth: 1))
+
+                        }
+                    }
+                    .padding(.horizontal)
+                    .padding(.vertical,4)
+                }
+                .padding(.bottom,2)
 
 
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: bounds.size.width / 3 - 1.2), spacing: 1.2)], spacing: 1) {
-                    ForEach(feedData) { item in
+                    ForEach(feedData.filter({"\($0)".contains(searchText.lowercased()) || searchText.isEmpty})) { item in
 
                         ImagesView(feed: item)
                             .frame(width: bounds.size.width / 3 - 0.6, height: bounds.size.height / 3 - 0.6)
                             .clipped()
                     }
+                    .animation(.spring())
                 }
             }
         }
-        .onAppear(perform: {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1){
+            .onAppear(perform: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 loadSearch = true
             }
         })
