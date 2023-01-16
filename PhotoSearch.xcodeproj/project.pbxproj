@@ -16,6 +16,9 @@
 		7B1BDEF62975DD1C00450436 /* PhotoSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1BDEF52975DD1C00450436 /* PhotoSearchTests.swift */; };
 		7B1BDF002975DD1C00450436 /* PhotoSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1BDEFF2975DD1C00450436 /* PhotoSearchUITests.swift */; };
 		7B1BDF022975DD1C00450436 /* PhotoSearchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1BDF012975DD1C00450436 /* PhotoSearchUITestsLaunchTests.swift */; };
+		7B1BDF0F2975DD8B00450436 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1BDF0E2975DD8B00450436 /* Feed.swift */; };
+		7B1BDF112975DF6E00450436 /* ImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1BDF102975DF6E00450436 /* ImagesView.swift */; };
+		7B1BDF132975E04000450436 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1BDF122975E04000450436 /* FeedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		7B1BDEFB2975DD1C00450436 /* PhotoSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B1BDEFF2975DD1C00450436 /* PhotoSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchUITests.swift; sourceTree = "<group>"; };
 		7B1BDF012975DD1C00450436 /* PhotoSearchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7B1BDF0E2975DD8B00450436 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		7B1BDF102975DF6E00450436 /* ImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesView.swift; sourceTree = "<group>"; };
+		7B1BDF122975E04000450436 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +105,14 @@
 			isa = PBXGroup;
 			children = (
 				7B1BDEDF2975DD1900450436 /* PhotoSearchApp.swift */,
+				7B1BDF0E2975DD8B00450436 /* Feed.swift */,
 				7B1BDEE12975DD1900450436 /* ContentView.swift */,
 				7B1BDEE32975DD1B00450436 /* Assets.xcassets */,
 				7B1BDEE82975DD1C00450436 /* Persistence.swift */,
 				7B1BDEEA2975DD1C00450436 /* PhotoSearch.xcdatamodeld */,
 				7B1BDEE52975DD1C00450436 /* Preview Content */,
+				7B1BDF102975DF6E00450436 /* ImagesView.swift */,
+				7B1BDF122975E04000450436 /* FeedView.swift */,
 			);
 			path = PhotoSearch;
 			sourceTree = "<group>";
@@ -263,7 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B1BDF132975E04000450436 /* FeedView.swift in Sources */,
 				7B1BDEEC2975DD1C00450436 /* PhotoSearch.xcdatamodeld in Sources */,
+				7B1BDF0F2975DD8B00450436 /* Feed.swift in Sources */,
+				7B1BDF112975DF6E00450436 /* ImagesView.swift in Sources */,
 				7B1BDEE92975DD1C00450436 /* Persistence.swift in Sources */,
 				7B1BDEE22975DD1900450436 /* ContentView.swift in Sources */,
 				7B1BDEE02975DD1900450436 /* PhotoSearchApp.swift in Sources */,
